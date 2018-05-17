@@ -1,8 +1,10 @@
 from django.contrib import admin
-from Bakeinators.blog.models import Blog, Category
 
 
 # Register your models here.
+from blog.models import Blog, Category
+
+
 class BlogAdmin(admin.ModelAdmin):
     exclude = ['posted']
     prepopulated_fields = {'slug': ('title',)}
