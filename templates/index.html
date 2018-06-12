@@ -1,29 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+
 {% extends 'base.html' %}
-{% block title %}Welcome to my blog{% endblock %}
+{% block head_title %}Bakeinators{% endblock %}
 
 {% block content %}
-    <h2>Categories</h2>
-    {% if categories %}
-        <ul>
-        {% for category in categories %}
-            <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>There are no posts.</p>
-    {% endif %}
+{% for post in posts %}
+    <div class="post">
+    							<div>
 
-    <h2>Posts</h2>
-    {% if posts %}
-        <ul>
-        {% for post in posts %}
-            <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>There are no posts.</p>
-    {% endif %}
+								<!-- Feature -->
+									<div>
+										<a href="view_post.html" class="image featured"><img src="templates/assets/css/images/pic02.jpg" alt="" /></a>
+										<header>
 
-{% endblock %}
+                                            <h3> <a href="post"> {{ blog.title }} </a> </h3>
+                                            <h4> <a href="category"> {{ Category }} </a> </h4>
+										</header>
+										<p> {{ blog.blog }}</p>
+									</div>
+
+							</div>
+
+    <div class="post">
+
+								<!-- Feature -->
+									<div>
+										<a href="post" class="image featured"><img src="templates/assets/css/images/pic02.jpg" alt="" /></a>
+										<header>
+
+                                             <h3> <a href="post"> {{ blog.title }} </a> </h3>
+                                            <h4> <a href="category"> {{ Category }} </a> </h4>
+										</header>
+										<p> {{ blog.blog }}</p>
+									</div>
+
+							</div>
+    <div class="post">
+
+								<!-- Feature -->
+									<div>
+										<a href="view_post.html" class="image featured"><img src="templates/assets/css/images/pic02.jpg" alt="" /></a>
+										<header>
+
+                                             <h3> <a href="post"> {{ blog.title }} </a> </h3>
+                                            <h4> <a href="category"> {{ Category }} </a> </h4>
+										</header>
+										<p> {{ blog.blog }}</p>
+									</div>
+
+							</div>
+    </div>
+{% endfor %}
+
+{% endblock%}

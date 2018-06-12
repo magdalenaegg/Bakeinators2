@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if  categories.length > 0 %}
+        <p>No category found</p>
+    {% else %} =
+        {% block head_title %}Select one of our baking categories:{% endblock %}
+        <br>
+        {% block title %}{{ category.title }}{% endblock %}
+    {% endif %}
+
+
+    {% if categories %}
+        <ul>
+        {% for category in categories %}
+            <li><a href=" category" {{ category.id }}>{{ category.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no posts.</p>
+    {% endif %}
+{% endblock %}
+
+

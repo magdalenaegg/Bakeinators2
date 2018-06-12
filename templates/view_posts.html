@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+{% block title %}Bakeinators{% endblock %}
+<body>
+{% block content %}
+
+<h2> What's new on Bakeinators?</h2>
+
+    <div class="blog">
+        {% for Blog in blog %}
+        <div class="Blog">
+                <h3><a href="#">{{ Blog.title }}</a></h3>
+                <p>{{ Blog.snippet }}</p>
+                <p>{{ Blog.posted }}</p>
+            </div>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
+</body>
