@@ -24,7 +24,7 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('view/<int:id>/', view_post),
-    path('categories/category/<int:id>', view_category),
+    path('category/<int:id>', view_category),
     path('categories/', view_categories),
     path('blog/', view_posts),
     path('', index)

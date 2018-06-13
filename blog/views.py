@@ -28,7 +28,7 @@ def view_posts(request):
         'post': posts,
       })
 
-def view_category(request, slug):
+def view_category(request, id):
     category = None
 
     try:
