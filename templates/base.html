@@ -9,7 +9,7 @@
     <title>{% block head_title %}Bakeinators
     {% endblock %}</title>
 
-    <link rel="stylesheet" href="templates/assets/css/main.css">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
 
 </head>
 
@@ -20,7 +20,7 @@
 				<div id="header-wrapper">
 					<div id="header" class="container">
 
-						<!-- Logo --><img src="pictures/static/logo.png">
+						<!-- Logo --><img src="{% static 'logo.png' %}">
 
                         <h1 id="logo"> Bakeinators
                             </h1>
