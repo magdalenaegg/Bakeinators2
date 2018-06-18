@@ -5,11 +5,12 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% block head_title %}Bakeinators
-    {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1", user-scalable=no />
+   <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
 
-    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+  <title> {% block head_title %}Bakeinators{% endblock %} </title>
+
+
 
 </head>
 
@@ -19,29 +20,23 @@
         <!-- Header -->
 				<div id="header-wrapper">
 					<div id="header" class="container">
+<br>
+						    <h1 id="logo"> Bakeinators
+                            </h1><br>
 
-						<!-- Logo --><img src="{% static 'logo.png' %}">
-
-                        <h1 id="logo"> Bakeinators
-                            </h1>
-							<p>The baking blog for everyone!</p>
 
 						<!-- Nav -->
-							<nav id="nav">
+                        <nav id="nav">
 								<ul>
-									<li><a class="icon fa-home" href="/blog"><span>Our favourite Recipes</span></a></li>
+									<li><a class="icon fa-star" href="/blog"><span>Our favourite Recipes</span></a></li>
                                     <li>
-										<a href="/categories" class="icon fa-bar-chart-o"><span>Find Recipes by Category</span></a>
+										<a href="/categories" class="icon fa-search"><span>Find Recipes by Category</span></a>
                                     </li>
 							</nav>
 
 					</div>
 </div>
 {% block content %}
-
-<p> here is some text </p>
-
-
 
 
 {% endblock %}

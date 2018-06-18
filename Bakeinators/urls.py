@@ -23,8 +23,8 @@ from blog.views import index,view_post, view_category, view_categories, view_pos
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    path('view/<int:id>/', view_post),
-    path('category/<int:id>', view_category),
+    path('view/<int:id>/', view_post, name='viewp'),
+    path('category/<int:id>', view_category, name='viewcat'),
     path('categories/', view_categories),
     path('blog/', view_posts),
     path('', index)

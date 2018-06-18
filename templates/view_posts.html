@@ -1,21 +1,10 @@
-
 {% extends 'base.html' %}
-{% block title %}Bakeinators{% endblock %}
-<body>
+
 {% block content %}
-
-<h2> What's new on Bakeinators?</h2>
-
-    <div class="blog">
-        {% for Blog in blog %}
-        <div class="Blog">
-                <h3><a href="#">{{ Blog.title }}</a></h3>
-                <p>{{ Blog.snippet }}</p>
-                <p>{{ Blog.posted }}</p>
-            </div>
-        {% endfor %}
-
-    </div>
-
+<h1> What's new on Bakeinators?</h1>
+<div class="container">
+    {% for p in posts %}
+        <a href="{% url 'viewp' p.id %}">{{ p.title }} </br> </a>
+    {% endfor %}
+</div>
 {% endblock %}
-</body>

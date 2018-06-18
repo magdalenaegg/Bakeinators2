@@ -1,31 +1,34 @@
 from django.http import HttpResponse
-from django.shortcuts import render_to_response, get_object_or_404, render
+from django.shortcuts import render_to_response, get_object_or_404
+
 
 
 # Create your views here.
-from blog.models import Category, Blog
+from .models import Category, Blog
+
 
 
 def index(request):
  return render_to_response('index.html', {
      'categories': Category.objects.all(),
-     'posts': Blog.objects.all()[:15]
+     'posts': Blog.objects.all()
  })
 
-def view_post(request, slug):
-    #posts = Blog.objects.all()
+def view_post(request, id):
+    posts = Blog.objects.all()
+    post = Blog.objects.get(pk=id)
     return render_to_response('view_post.html', {
-        'post': get_object_or_404(Blog, slug=slug)
+        'post': post, 'posts': posts
     })
 
 def view_posts(request):
-    try:
-        posts = Blog.objects.all()
-    except:
-        pass
+    posts = Blog.objects.all().order_by('posted')
+
+#    except:
+ #       pass
 
     return render_to_response('view_posts.html', {
-        'post': posts,
+        'posts': posts,
       })
 
 def view_category(request, id):
@@ -45,15 +48,13 @@ def view_category(request, id):
     })
 
 def view_categories(request):
-    categories = []
-
     try:
         categories = Category.objects.all()
     except:
         pass
 
     return render_to_response('view_categories.html', {
-        'categories': categories,
+      'categories': categories.all(),
       })
 
 #def blog(request):

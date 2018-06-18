@@ -4,15 +4,14 @@
     {% if category == None %}
         <p>No category found</p>
     {% else %}
-        {% block head_title %}Viewing category {{ category.title }}{% endblock %}
-        {% block title %}{{ category.title }}{% endblock %}
+        <h2>{% block title %}{{ category.title }}{% endblock %}</h2>
     {% endif %}
 
 
     {% if posts %}
         <ul>
-        {% for post in posts %}
-            <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+        {% for p in posts %}
+            <li><a href= "/blog"> {{ p.title }}</a></li>
         {% endfor %}
         </ul>
     {% else %}
