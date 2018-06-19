@@ -16,27 +16,38 @@
 
 <body class="homepage">
 		<div id="page-wrapper">
-
+<style>
+    .container {
+    position: center;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    background: #fff8f7;
+    color: #460431;
+    text-align: center;
+}
+</style>
         <!-- Header -->
 				<div id="header-wrapper">
 					<div id="header" class="container">
 <br>
 						    <h1 id="logo"> Bakeinators
                             </h1>
+</div>
 
 
-						<!-- Nav -->
-                        <br>
+
                         <nav id="nav">
-								<ul>
-									<li><a class="icon fa-star" href="/blog"><span>Our favourite Recipes</span></a></li>
+								<ul><li><a class="icon fa-star" href="/blog"><span>Our favourite Recipes</span></a></li>
                                     <li>
 										<a href="/categories" class="icon fa-search"><span>Find Recipes by Category</span></a>
                                     </li>
-							</nav>
-
-					</div>
+                                </ul>
+                            							</nav>
+                </div>
+                </div>
 </div>
+
 {% block content %}
 
 
@@ -44,7 +55,7 @@
 
 <style>
     .footer {
-    position: fixed;
+    position: static;
     left: 0;
     bottom: 0;
     width:100%;
