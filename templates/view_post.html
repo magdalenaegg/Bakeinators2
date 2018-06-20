@@ -18,7 +18,7 @@
             <h2>{{ p.title }}</h2>
         <p>{{ p.posted }}</p>
     <p> {{ p.description }}</p>
-    <img src="{{ p.item_photo.url }}"/></a>
+    <img src="/static/media/{{ p.item_photo.url }}"/></a>
     <p> {{ p.ingredients|linebreaks}} </p>
     <p> {{ p.blog|linebreaks}}</p>
    {% endfor %}
