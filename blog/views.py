@@ -15,9 +15,9 @@ def index(request):
  })
 
 def view_post(request, id):
-    posts = Blog.objects.all()
-    post = Blog.objects.get(pk=id)
-    return render_to_response('view_post.html', {
+   posts = Blog.objects.filter(id=id)
+   post = Blog.objects.get(pk=id)
+   return render_to_response('view_post.html', {
         'post': post, 'posts': posts
     })
 
@@ -39,7 +39,7 @@ def view_category(request, id):
     except:
         pass
 
-    posts = Blog.objects.filter(category=category)[:5]
+    posts = Blog.objects.filter(category=category)[:15]
 
 
     return render_to_response('view_category.html', {

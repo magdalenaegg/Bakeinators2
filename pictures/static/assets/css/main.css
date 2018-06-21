@@ -85,6 +85,23 @@ input, select, textarea {
 	appearance: none;
 }
 
+
+    .img {
+     text-align: center;
+    }
+.p {
+    text-align: center;
+}
+
+    .footer {
+    position: static;
+    left: 10px;
+    bottom: 0;
+    width:100%;
+    background: #fff8f7;
+    color: #460431;
+    text-align: center;
+}
 /* Basic */
 
 	html {
@@ -2040,7 +2057,7 @@ input, select, textarea {
 		box-shadow: inset 0px -8px 0px 0px #fff, inset 0px 8px 0px 0px #fff;
 		position: relative;
 		text-transform: uppercase;
-		background: url("../css/images/banner.jpg");
+		background: url("images/banner.jpg");
 		background-size: cover;
 		padding: 10em 0;
 	}

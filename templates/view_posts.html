@@ -4,7 +4,9 @@
 <h1> What's new on Bakeinators?</h1>
 <div class="container">
     {% for p in posts %}
-        <a href="{% url 'viewp' p.id %}">{{ p.title }}</a>
+        <a href="{% url 'viewp' p.id %}">{{ p.title}}</a>
+        <img src="/media/{{ p.item_photo.url }}">
+        <p>{{ p.description }}</p><br>
     {% endfor %}
 </div>
 {% endblock %}

@@ -3,24 +3,16 @@
 
 {% block content %}
 
-    <style>
-    .img {
-    position: center;
-    left: 0;
-    bottom: 0;
-    width:20%
-};
-</style>
+
 <div class="post-detail">
 <div class = "post">
     {% for p in posts %}
-
-            <h2>{{ p.title }}</h2>
+        <h2>{{ p.title }}</h2>
         <p>{{ p.posted }}</p>
-    <p> {{ p.description }}</p>
-    <img src="/static/media/{{ p.item_photo.url }}"/></a>
-    <p> {{ p.ingredients|linebreaks}} </p>
-    <p> {{ p.blog|linebreaks}}</p>
+        <p> {{ p.description }}</p>
+        <img src="/static/media/{{ p.item_photo.url }}"/></a>
+        <p> {{ p.ingredients|linebreaks}} </p>
+        <p> {{ p.blog|linebreaks}}</p>
    {% endfor %}
 </div>
 </div>
