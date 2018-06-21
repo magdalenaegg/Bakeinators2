@@ -21,7 +21,7 @@ class Blog(object):
 
 class Blog(models.Model):
     title = models.CharField(max_length=100, unique=True)
-    item_photo = models.ImageField(default='default.png', upload_to='media')
+    item_photo = models.ImageField(default='default.png', upload_to='pictures/media')
     slug = models.SlugField()
     description = models.TextField()
     ingredients = models.TextField()
