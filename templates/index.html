@@ -6,7 +6,7 @@
     {% for p in posts %}
         <a href="{% url 'viewp' p.id %}">{{ p.title }}</a> <br>
         <img src="/static/media/{{ p.item_photo.url }}">
-        <a>{{ p.description }}</a><br>
+        <p>{{ p.description }}</p><br>
     {% endfor %}
 </div>
 

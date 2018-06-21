@@ -24,7 +24,7 @@ class Blog(models.Model):
     item_photo = models.ImageField(default='default.png', upload_to='media')
     slug = models.SlugField()
     description = models.TextField()
-    ingredients = models.TextField(list)
+    ingredients = models.TextField()
     blog = models.TextField()
     posted = models.DateField(db_index=True, auto_now_add=True)
     category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)

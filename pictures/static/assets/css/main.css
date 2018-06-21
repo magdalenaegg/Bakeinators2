@@ -39,7 +39,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-		display: block;
+		display: contents;
 	}
 
 body {
@@ -215,45 +215,7 @@ input, select, textarea {
 		clear: both;
 	}
 
-/* Container */
 
-	.container {
-		margin: 50px;
-		max-width: 100%;
-		width: 70em;
-	}
-
-		@media screen and (max-width: 1680px) {
-
-			.container {
-				width: 68em;
-			}
-
-		}
-
-		@media screen and (max-width: 1280px) {
-
-			.container {
-				width: calc(100% - 80px);
-			}
-
-		}
-
-		@media screen and (max-width: 980px) {
-
-			.container {
-				width: calc(100% - 100px);
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			.container {
-				width: calc(100% - 40px);
-			}
-
-		}
 
 /* Row */
 
@@ -1895,41 +1857,20 @@ input, select, textarea {
 
 /* Header */
 
-	#header {
-		position: relative;
-		position: relative;
-		background: #fff;
-		text-align: center;
-	}
-
-		#header > .container {
-			padding: 14em 0 7em 0;
-			border-bottom: solid 2px #e5e5e5;
-			box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
-		}
-
 		#header h1 {
 			font-family: 'Arvo';
 			font-weight: 700;
 			color: #ed786a;
 			text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
 			font-size: 3em;
-			letter-spacing: 13px;
+			letter-spacing: 5px;
 		}
 
 			#header h1 a {
 				border: 0;
 			}
 
-		#header p {
-			text-transform: uppercase;
-			font-weight: 400;
-			color: #888;
-			margin: 2.5em 0 0 0;
-			font-size: 0.85em;
-			letter-spacing: 3px;
-			text-align: center;
-		}
+
 
 /* Nav */
 

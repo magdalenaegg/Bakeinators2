@@ -18,7 +18,7 @@
 		<div id="page-wrapper">
 <style>
     .container {
-    position: center;
+    position: static;
     left: 0;
     bottom: 0;
     width:100%;
@@ -27,24 +27,26 @@
     text-align: center;
 }
 </style>
+
+
         <!-- Header -->
 				<div id="header-wrapper">
 					<div id="header" class="container">
 <br>
-						    <h1 id="logo"> Bakeinators
-                            </h1>
-</div>
+						   <h1 id="logo"><a href="/"> Bakeinators </a></h1>
 
 
 
                         <nav id="nav">
-								<ul><li><a class="icon fa-star" href="/blog"><span>Our favourite Recipes</span></a></li>
+								<ul>
+                                    <li><a class="icon fa-star" href="/blog"><span>Our favourite Recipes</span></a></li>
                                     <li>
 										<a href="/categories" class="icon fa-search"><span>Find Recipes by Category</span></a>
                                     </li>
                                 </ul>
                             							</nav>
-                </div>
+              </div>
+
                 </div>
 </div>
 
@@ -54,9 +56,16 @@
 {% endblock %}
 
 <style>
+    .img {
+     text-align: center;
+    }
+.p {
+    text-align: center;
+}
+
     .footer {
     position: static;
-    left: 0;
+    left: 10px;
     bottom: 0;
     width:100%;
     background: #fff8f7;
