@@ -5,7 +5,7 @@
 <div class="container">
     {% for p in posts %}
         <a href="{% url 'viewp' p.id %}">{{ p.title }}</a> <br>
-        <img src="/static/{{ p.item_photo.url }}">
+        <img class="viewImageSmall" src="/static/{{ p.item_photo.url }}">
         <p>{{ p.description }}</p><br>
     {% endfor %}
 </div>
