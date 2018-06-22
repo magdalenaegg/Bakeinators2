@@ -2,12 +2,13 @@
 
 {% block content %}
 
-<h1>Select one of our baking categories:</h1>
+<h2 style="text-align: center; font-weight: bold">Select one of our baking categories!</h2>
 <div class="container">
     {% for c in categories %}
-    <a href="{% url 'viewcat' c.id %}">{{ c.title }} </br> </a>
+    <a href="{% url 'viewcat' c.id %}" >{{ c.title }} </br> </a>
 
   {% endfor %}
+
 </div>
 {% endblock %}
 

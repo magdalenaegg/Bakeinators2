@@ -1,22 +1,25 @@
 {% extends 'base.html' %}
+{% load static from staticfiles %}
 
 {% block content %}
     {% if category == None %}
         <p>No category found</p>
     {% else %}
-        <h2>{% block title %}{{ category.title }}{% endblock %}</h2>
+        <h2 style="text-align: center">{{ category.title }}</h2>
     {% endif %}
 
-
+<div class="container">
     {% if posts %}
-        <ul>
-        {% for p in posts %}
-            <li><a href="{% url 'viewp' p.id %}">{{ p.title}}</a></li>
+              {% for p in posts %}
+                  <a href="{% url 'viewp' p.id %}">{{ p.title}} </br> </a>
+                  <img class="viewImageSmall" src="/static/{{ p.item_photo.url }}">
+                  <p style="text-align: center">{{ p.description }}</p>
         {% endfor %}
-        </ul>
+
     {% else %}
         <p>There are no posts.</p>
     {% endif %}
+</div>
 {% endblock %}
 
 

@@ -5,3 +5,10 @@
 .viewImageLarge {
     max-width: 400px;
 }
+
+.h1 {
+    font-size: larger;
+    text-align: match-parent;
+    color: #ed786a;
+    font-weight: bold;
+}

@@ -8,10 +8,12 @@
 <div class = "post">
     {% for p in posts %}
         <h2>{{ p.title }}</h2>
-        <p>{{ p.posted }}</p>
-        <p> {{ p.description }}</p>
+        <p>{{ p.category.title }} - {{ p.posted}}</p>
+        <p style="font-style: italic"> {{ p.description }}</p>
         <img class="viewImageLarge" src="/static/{{ p.item_photo.url }}"/></a>
-        <p> {{ p.ingredients|linebreaks}} </p>
+       <h4>Ingredients:</h4>
+        <p> {{ p.ingredients|linebreaks}} </p> <br>
+        <h4>Preparation:</h4>
         <p> {{ p.blog|linebreaks}}</p>
    {% endfor %}
 </div>
